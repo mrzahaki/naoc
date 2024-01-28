@@ -1,3 +1,42 @@
+"""
+Filename: rbfnn.py
+Author: Hossein ZahakiMansoor
+Description:
+    This module implements a Radial Basis Function Neural Network (RBFNN) in TensorFlow. 
+    The RBFNN is designed for regression tasks with configurable input dimensions, output dimensions, 
+    number of centers, input intervals, and sigma values. It provides methods for initialization, 
+    calculating RBF activations, predicting outputs, and generating multiple instances based on vectors.
+
+Class Overview:
+    - RBFNN: Implements the Radial Basis Function Neural Network with methods for initialization, prediction,
+      and generating multiple instances based on input vectors. Includes a generator method for creating
+      multiple RBFNN instances.
+
+Dependencies:
+    - TensorFlow (tf)
+    - numpy (np)
+
+Usage Example:
+    rbfnn = RBFNN(input_dim, output_dim, num_centers, input_intervals, sigma)
+    prediction = rbfnn(input_data)
+
+License:
+    Copyright 2024 Hossein ZahakiMansoor
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+"""
+
+
 from typing import Any
 import tensorflow as tf
 import numpy as np

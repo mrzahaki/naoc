@@ -1,3 +1,41 @@
+"""
+Filename: controller.py
+Author: Hossein ZahakiMansoor
+Description: 
+    This module implements a Controller class in TensorFlow, designed for generating control inputs
+    based on the error variable in a dynamical system. The controller incorporates an Actor Neural Network (ActorNN)
+    and parameters such as eta, eta_bar, r, and kb for defining the control objective and constraints. The predict
+    method is provided to generate control inputs based on the error variable.
+
+Dependencies:
+    - TensorFlow (tf)
+    - naocnp.actornn.ActorNN
+
+Class Overview:
+    - Controller: Implements a controller with an Actor Neural Network for generating control inputs.
+      Methods include predict.
+
+Usage Example:
+    controller = Controller(actornn, eta, eta_bar, r, kb, ...)
+    alpha = controller(s)
+
+License:
+    Copyright 2024 Hossein ZahakiMansoor
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+"""
+
+
 from typing import Any
 import tensorflow as tf
 # from naocnp.actornn import ActorNN

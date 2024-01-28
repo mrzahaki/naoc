@@ -1,3 +1,43 @@
+"""
+Filename: observer.py
+Author: Hossein ZahakiMansoor
+Description: 
+    This module implements an Observer class in TensorFlow, designed for state estimation
+    in dynamical systems. The observer incorporates a Radial Basis Function Neural Network (RBFNN)
+    and an online solver for updating the state estimation. It includes an update law for adapting
+    the RBFNN weights. The module also provides methods for executing the observer, updating weights,
+    and computing the error surface.
+
+Dependencies:
+    - TensorFlow (tf)
+    - naocnp.onlinesolver.OnlineSolver
+    - naocnp.rbfnn.RBFNN
+
+Class Overview:
+    - Observer: Implements the state observer with an RBFNN for state estimation.
+      Methods include observer_state_reducer, exec, critic_normalizer, updatelaw_state_reducer,
+      update, and error_surface.
+
+Usage Example:
+    observer = Observer(L, C, Bn, learning_rate, forgetting_rate, ...)
+    x_hat, y_hat = observer(y, u)
+
+License:
+    Copyright 2024 Hossein Zahaki
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+"""
+
 import tensorflow as tf
 # from naocnp.rbfnn import RBFNN
 from naocnp.onlinesolver import OnlineSolver

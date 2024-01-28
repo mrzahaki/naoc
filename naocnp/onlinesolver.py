@@ -1,3 +1,38 @@
+"""
+Filename: onlinesolver.py
+Author: Hossein ZahakiMansoor
+Description: 
+    This module provides the OnlineSolver class, a utility for numerical simulations
+    with an online state update mechanism. It supports both internal state updates and 
+    external state updates based on a specified solver step and state reducer function.
+
+Dependencies:
+    - numpy (np)
+
+Class Overview:
+    - OnlineSolver: Implements an online solver with methods for updating internal and external states.
+      Methods include solver_update_int_state and solver_update_ext_state.
+
+Usage Example:
+    solver = OnlineSolver(state_reducer, solver_step, state_init)
+    updated_state = solver.update(*args, **kwargs)
+
+License:
+    Copyright 2024 Hossein ZahakiMansoor
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+"""
+
 import numpy as np # for numerical operations
 
 class OnlineSolver:

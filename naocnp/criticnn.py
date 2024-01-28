@@ -1,3 +1,45 @@
+"""
+Filename: criticnn.py
+Author: Hossein ZahakiMansoor
+Description: 
+    This module implements the CriticNN class in TensorFlow, serving as a critic for 
+    reinforcement learning applications. The CriticNN utilizes Radial Basis Function Neural Networks (RBFNN)
+    and an online solver for updating weights based on error variables, controller efforts, and observer terms.
+    It supports compact set parameters, and importance weights for state errors and control efforts.
+    The module also includes methods for prediction and weight updates.
+
+Dependencies:
+    - TensorFlow (tf)
+    - naocnp.rbfnn.RBFNN
+    - naocnp.onlinesolver.OnlineSolver
+    - naocnp.observer.Observer
+
+Class Overview:
+    - CriticNN: Implements the critic for reinforcement learning with RBFNN.
+      Methods include predict, update, and phi_normalizer.
+
+Usage Example:
+    critic = CriticNN(q, r, kb, learning_rate, observer, ...)
+    critic.update(s, controller_vector, y, y_hat)
+    critic_estimation = critic(s)
+
+License:
+    Copyright 2024 Hossein ZahakiMansoor
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+"""
+
+
 from typing import Any
 import tensorflow as tf
 from naocnp.rbfnn import RBFNN

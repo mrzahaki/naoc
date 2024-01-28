@@ -1,3 +1,46 @@
+"""
+Filename: actornn.py
+Author: Hossein ZahakiMansoor
+Description: 
+    This module implements the ActorNN class, a key component in control systems.
+    The class utilizes Radial Basis Function Neural Networks (RBFNNs) to predict control actions
+    based on the error variable (surface). It includes a state reducer for updating the actor weights,
+    as well as methods for predicting actor outputs and updating weights. The ActorNN class is
+    typically used in conjunction with an Observer and CriticNN to form a complete control system.
+
+Dependencies:
+    - TensorFlow (tf)
+    - naocnp.onlinesolver.OnlineSolver
+    - naocnp.rbfnn.RBFNN
+    - naocnp.observer.Observer
+    - naocnp.criticnn.CriticNN
+
+Class Overview:
+    - ActorNN: Implements the Actor Neural Network (ActorNN) for control systems.
+      Methods include predict, actor_state_reducer, and update.
+      The class is used to predict control actions based on the error variable and update the actor weights.
+
+Usage Example:
+    actor = ActorNN(q, r, kb, learning_rate, rbfnn_num_centers_vector, observer, ...)
+    actor_estimation = actor(error_variable)
+
+License:
+    Copyright 2024 Hossein ZahakiMansoor
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+"""
+
+
 from typing import Any
 import tensorflow as tf
 from naocnp.rbfnn import RBFNN

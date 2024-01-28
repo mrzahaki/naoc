@@ -13,4 +13,26 @@ The main features of the NAOC method are:
 - It can guarantee the uniform ultimate boundedness of all the closed-loop signals and the nonviolation of the state constraints.
 
 
-x Under Developement
+#### Characteristics of the Program:
+
+1. **Modular Structure:** A modular structure has been employed, with multiple classes organized to serve distinct purposes, such as `OnlineSolver`, `Observer`, `CriticNN`, `ActorNN`, `Controller`, and `Sim1`. This organization enhances code readability and maintainability.
+
+2. **Object-Oriented Design:** Object-oriented programming (OOP) principles have been applied through the definition of classes and their methods. This approach facilitates the encapsulation of related functionalities within classes, contributing to improved code organization and reusability.
+
+3. **TensorFlow Usage:** The code utilizes TensorFlow for the definition and manipulation of tensors, construction of neural networks (e.g., RBFNN), and implementation of online solvers.
+
+4. **OnlineSolver:** The `OnlineSolver` class is designed as a generic class for updating states based on a state reducer function, demonstrating its utility for various iterative algorithms.
+
+5. **Observer:** An observer for a control system is implemented in the `Observer` class. It encompasses an observer state reducer, an execution method, and other relevant functionalities.
+
+6. **CriticNN and ActorNN:** These classes are components of an actor-critic architecture, commonly utilized in reinforcement learning. They encompass the definition of neural networks, learning rates, and other parameters.
+
+7. **Controller:** The `Controller` class represents a controller with methods for predicting control actions based on state variables.
+
+8. **Simx:** `Simx` class is formulated for simulating a system with a specific state reducer. It involves the updating of the state based on a control input and the subsequent return of the state and output.
+
+9. **Documentation:** Comments and docstrings have been incorporated to provide information about the purpose and usage of classes and functions, enhancing code readability and fostering collaboration.
+
+10. **Configuration Parameters:** Parameters such as learning rates, forgetting rates, and other coefficients have been introduced, enabling flexibility and customization of the control system.
+
+The code also includes a simulation scenario using the NAOC (Nonlinear Adaptive Observer and Controller) framework. It utilizes various classes and parameters to simulate a control system, providing visualizations of system states, observer estimates, and other relevant metrics over time. The simulation involves iterative steps, updating the control system based on observed states and feedback mechanisms.

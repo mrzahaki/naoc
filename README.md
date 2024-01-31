@@ -31,8 +31,6 @@ The main features of the NAOC method are:
 
 8. **Simx:** `Simx` class is formulated for simulating a system with a specific state reducer. It involves the updating of the state based on a control input and the subsequent return of the state and output.
 
-9. **Documentation:** Comments and docstrings have been incorporated to provide information about the purpose and usage of classes and functions, enhancing code readability and fostering collaboration.
-
-10. **Configuration Parameters:** Parameters such as learning rates, forgetting rates, and other coefficients have been introduced, enabling flexibility and customization of the control system.
+9. **Configuration Parameters:** Parameters such as learning rates, forgetting rates, and other coefficients have been introduced, enabling flexibility and customization of the control system.
 
 The code also includes a simulation scenario using the NAOC (Nonlinear Adaptive Observer and Controller) framework. It utilizes various classes and parameters to simulate a control system, providing visualizations of system states, observer estimates, and other relevant metrics over time. The simulation involves iterative steps, updating the control system based on observed states and feedback mechanisms.
